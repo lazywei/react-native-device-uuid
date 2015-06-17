@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/lazywei/Projects/cm/CmMobile/node_modules/react-native-device-uuid/RCTDeviceUUID.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

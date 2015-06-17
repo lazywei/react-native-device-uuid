@@ -15,10 +15,18 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getUUID)
+RCT_EXPORT_METHOD(getUUID:(RCTResponseSenderBlock)callback)
 {
-  // Your implementation here
+  NSUUID *deviceId;
+
+#if TARGET_IPHONE_SIMULATOR
+  deviceId = [NSUUID initWithUUIDString:@"UUID-STRING-VALUE"];
+#else
+  deviceId = [UIDevice currentDevice].identifierForVendor;
+#endif
+
   RCTLogInfo(@"Pretending to create an event");
+  callback(@[[NSNull null], [NSArray arrayWithObjects: [deviceId UUIDString], nil]]);
 }
 
 @end

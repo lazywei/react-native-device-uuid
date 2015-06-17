@@ -8,8 +8,17 @@ var invariant = require('invariant');
  */
 
 var DeviceUUID = {
-  getUUID: function() {
-    RCTDeviceUUID.getUUID();
+  getUUID() {
+    return new Promise((resolve, reject) => {
+      RCTDeviceUUID.getUUID((error, uuid) => {
+        if (error) {
+          console.log("Got error when trying to get uuid from Native side");
+          reject(error);
+        } else {
+          resolve(uuid[0]);
+        }
+      });
+    });
   }
 };
 

@@ -1,0 +1,20 @@
+{
+  "name": "react-native-device-uuid",
+  "version": "1.0.0",
+  "description": "Get the device UUID for iOS device",
+  "main": "DeviceUUID.ios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "reactjs",
+    "react-native",
+    "ios"
+  ],
+  "peerDependencies": {
+    "react-native": ">=0.3.4 <0.5.0"
+  },
+  "author": "Chih-Wei <bert.cwchang@gmail.com> (Bert)",
+  "license": "MIT"
+}

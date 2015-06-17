@@ -1,6 +1,6 @@
 {
   "name": "react-native-device-uuid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get the device UUID for iOS device",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "ios"
   ],
   "peerDependencies": {
-    "react-native": ">=0.4.4 <0.5.0"
+    "react-native": ">=0.3.4 <=0.6.0rc"
   },
   "author": "Chih-Wei <bert.cwchang@gmail.com> (Bert)",
   "license": "MIT"

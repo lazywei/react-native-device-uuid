@@ -2,3 +2,12 @@ react-native-device-uuid
 =========================
 
 Provide iOS's [identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor) as UUID for React Native Application.
+
+## Usage
+
+```
+var DeviceUUID = require("react-native-device-uuid");
+DeviceUUID.getUUID().then((uuid) => {
+  console.log(uuid);
+});
+```

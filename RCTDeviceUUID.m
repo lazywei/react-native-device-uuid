@@ -20,7 +20,7 @@ RCT_EXPORT_METHOD(getUUID:(RCTResponseSenderBlock)callback)
   NSUUID *deviceId;
 
 #if TARGET_IPHONE_SIMULATOR
-  deviceId = [NSUUID initWithUUIDString:@"UUID-STRING-VALUE"];
+  deviceId = [[NSUUID alloc]initWithUUIDString:@"UUID-STRING-VALUE"];
 #else
   deviceId = [UIDevice currentDevice].identifierForVendor;
 #endif

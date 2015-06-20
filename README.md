@@ -27,3 +27,18 @@ DeviceUUID.getUUID().then((uuid) => {
   console.log(uuid);
 });
 ```
+
+## Troubleshooting
+
+### DeviceUUID just hangs and does not log the uuid to the console ([#2](https://github.com/lazywei/react-native-device-uuid/issues/2)), thanks to [@irfaan](https://github.com/irfaan)
+
+1. In XCode, in the project navigator, right click Libraries
+2. Add Files to [your project's name]
+3. Go to node\_modules
+4. react-native-device-uuid and add the .xcodeproj file
+5. In XCode, in the project navigator, select your project
+6. Add the lib\*.a from the react-native-device-uuid project to your project's Build Phases - Link Binary With Libraries. Select the .a file.
+7. Go to the Build Settings tab.
+8. Make sure 'All' is toggled on (instead of 'Basic').
+9. Look for Header Search Paths and make sure it contains both `$(SRCROOT)/../react-native/React` and `$(SRCROOT)/../../React` - mark both as recursive.
+

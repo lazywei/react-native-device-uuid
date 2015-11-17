@@ -1,16 +1,15 @@
 'use strict';
 
-var RCTDeviceUUID = require('NativeModules').DeviceUUID;
-var invariant = require('invariant');
+var DeviceUUID = require('react-native').NativeModules.DeviceUUID;
 
 /**
  * High-level docs for the Sample iOS API can be written here.
  */
 
-var DeviceUUID = {
+module.exports = {
   getUUID() {
     return new Promise((resolve, reject) => {
-      RCTDeviceUUID.getUUID((error, uuid) => {
+      DeviceUUID.getUUID((error, uuid) => {
         if (error) {
           console.log("Got error when trying to get uuid from Native side");
           reject(error);
@@ -21,5 +20,3 @@ var DeviceUUID = {
     });
   }
 };
-
-module.exports = DeviceUUID;

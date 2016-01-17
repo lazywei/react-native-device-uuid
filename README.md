@@ -11,6 +11,10 @@ Sometimes we need an unique identifier (e.g., when implementing special authenti
 However, device token, which is mainly used for push notification, is not suitable in such use case. The reason is that device token **can** and **will change**.
 For details, please refers to [Is the device token as unique as the device ID?](http://stackoverflow.com/questions/6927011/is-the-device-token-as-unique-as-the-device-id).
 
+### Note: The UUID will change if the app is reinstalled
+
+"The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device. The value changes when the user deletes all of that vendor’s apps from the device and subsequently reinstalls one or more of them. The value can also change when installing test builds using Xcode or when installing an app on a device using ad-hoc distribution. Therefore, if your app stores the value of this property anywhere, you should gracefully handle situations where the identifier changes." - [source: identifierForVendor](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor)
+
 ## How?
 
 ### Install

@@ -21,6 +21,7 @@ For details, please refers to [Is the device token as unique as the device ID?](
 
 ```bash
 npm install --save react-native-device-uuid
+react-native link
 ```
 
 ### Usage

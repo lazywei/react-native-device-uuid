@@ -7,7 +7,6 @@
 //
 
 #import "RCTDeviceUUID.h"
-#import "RCTBridge.h"
 
 @implementation RCTDeviceUUID
 
